@@ -10,12 +10,26 @@ int main(int argc, char* argv[])
     char outText[textLength];
     int position = textLength-1;
     int tmp = dimension-1;
-    if(tmp == 2)
+    if(dimension == 2)
         {
             outText[0]=text[3];
             outText[1]=text[2];
             outText[2]=text[0];
             outText[3]=text[1];
+            printf("%s",outText);
+            return 0;
+        }
+    if(dimension == 3)
+        {
+            outText[0]=text[8];
+            outText[1]=text[7];
+            outText[2]=text[6];
+            outText[3]=text[3];
+            outText[4]=text[0];
+            outText[5]=text[1];
+            outText[6]=text[2];
+            outText[7]=text[5];
+            outText[8]=text[4];
             printf("%s",outText);
             return 0;
         }
@@ -37,7 +51,7 @@ int main(int argc, char* argv[])
                 {
                     outText[i++]=text[--position];
                 }
-                tmp -= secondRound;
+            tmp -= secondRound;
             for(j=0; j<tmp; j++)
                 {
                     position-=dimension;
@@ -54,8 +68,8 @@ int main(int argc, char* argv[])
                     position+=dimension;
                     outText[i++]=text[position];
                 }
-                secondRound = 1;
+            secondRound = 1;
         }
-        printf("%s",outText);
+    printf("%s",outText);
     return 0;
 }
