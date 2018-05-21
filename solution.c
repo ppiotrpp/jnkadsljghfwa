@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
             outText[6]=text[2];
             outText[7]=text[5];
             outText[8]=text[4];
-            printf("%s",outText);
+            printf("%.*s", textLength, outText);
             return 0;
         }
     int i=1;
